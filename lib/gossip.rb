@@ -24,4 +24,8 @@ class Gossip
     end
     all_gossips
   end
+
+  def self.find(gossip_id)
+    all[gossip_id]
+  end
 end
