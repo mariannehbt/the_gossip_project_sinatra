@@ -28,4 +28,7 @@ class Gossip
   def self.find(gossip_id)
     all[gossip_id]
   end
+
+  def self.each_with_index
+  end
 end
