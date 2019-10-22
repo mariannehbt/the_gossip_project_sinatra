@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'csv'
+require 'pry'
 
 # On enregistre le potin dans la base de donnees
 class Gossip
@@ -29,6 +30,9 @@ class Gossip
     all[gossip_id]
   end
 
-  def self.each_with_index
+  def self.update(id, new_author, new_description)
+    CSV.read('./db/gossip.csv')[id][0] == new_author
+    CSV.read('./db/gossip.csv')[id][1] == new_description
   end
+#binding.pry
 end
